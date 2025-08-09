@@ -25,3 +25,15 @@ function actualizarLista() {
         listaHTML.appendChild(li);
     }
 }
+function sortearAmigo() {
+    if (amigos.length < 1) {
+        alert("Insterte al menos un nombre valido");
+        return;
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+    
+    let resultadoHTML = document.getElementById('resultado');
+    resultadoHTML.innerHTML = `El amigo secreto es: **${amigoSorteado}**`;
+}
